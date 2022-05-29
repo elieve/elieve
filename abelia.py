@@ -4,7 +4,7 @@ from time import sleep
 @ultroid_cmd(pattern="abel")
 async def bye(ult):
  await ult.edit("ABELIA JELEK! GAPUNYA PACAR YGY")
- sleep(3)
+ sleep(1)
 
  await ult.edit("""
  
@@ -14,11 +14,12 @@ async def bye(ult):
          ┃┏━┓┣┓┏┛┃┏━━┛
          ┃┗━┛┃┃┃╋┃┗━━┓
          ┗━━━┛┗┛╋┗━━━┛
-   async def _(event):
+         """)
+   sleep(1)
    await edit_or_reply(
         event,
         "┈┈┏━╮╭━┓┈╭━━━━╮\n"
-        "┈┈┃┏┗┛┓┃╭┫Ngok ┃\n"
+        "┈┈┃┏┗┛┓┃╭┫Bocil┃\n"
         "┈┈╰┓▋▋┏╯╯╰━━━━╯\n"
         "┈╭━┻╮╲┗━━━━╮╭╮┈\n"
         "┈┃▎▎┃╲╲╲╲╲╲┣━╯┈\n"
@@ -28,7 +29,7 @@ async def bye(ult):
     )
 
 
-    async def _(event):
+    sleep(1)
     await edit_or_reply(
         event,
         "╥━━━━━━━━╭━━╮━━┳\n"
@@ -37,7 +38,7 @@ async def bye(ult):
         "╢╰━┫┈┈┈┈┈╰╯╰┳━╯┣\n"
         "╢┊┊┃┏┳┳━━┓┏┳┫┊┊┣\n"
         "╨━━┗┛┗┛━━┗┛┗┛━━┻\n",
-    )
+    
     
         
-        NYEEEE NYEEE BOCIL MWAA""")
+        NYEEEE NYEEE BOCIL MWAA)
