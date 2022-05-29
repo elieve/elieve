@@ -36,4 +36,4 @@ async def bye(ult):
         "╨━━┗┛┗┛━━┗┛┗┛━━┻\n",
  
 
-NYEE NYEE NYEEE
+ NYEE NYEE NYEEE
