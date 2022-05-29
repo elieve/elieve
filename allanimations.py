@@ -366,7 +366,7 @@ async def snku(ult):
         "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n          (> ^_^)>🧠🗑",
         "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           (> ^_^)>🗑",
         "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           <(^_^ <)🗑",
-        GOOOOBBBBBBLLOOOOOOOOOOOK JANCKOK!!
+        "GOOOOBBBBBBLLOOOOOOOOOOOK JANCKOK!!",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
