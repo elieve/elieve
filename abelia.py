@@ -15,5 +15,5 @@ async def bye(ult):
 ┃┗━┛┃┃┃╋┃┗━━┓
 ┗━━━┛┗┛╋┗━━━┛
 
-        
+       
 NYEEEE NYEEE BOCIL MWAA""")
