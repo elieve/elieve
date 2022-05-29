@@ -15,7 +15,7 @@ await ult.edit("""
          ┃┗━┛┃┃┃╋┃┗━━┓
          ┗━━━┛┗┛╋┗━━━┛
          """)
- sleep(1)
+
  await edit_or_reply(
         event,
         "┈┈┏━╮╭━┓┈╭━━━━╮\n"
