@@ -33,7 +33,7 @@ A = ("▄███████▄\n"
 "_████\n")
 
 B = ("┈┈┏━╮╭━┓┈╭━━━━╮\n"
-"┈┈┃┏┗┛┓┃╭┫ⓞⓘⓝⓚ┃\n"
+"┈┈┃┏┗┛┓┃╭┫PANII┃\n"
 "┈┈╰┓▋▋┏╯╯╰━━━━╯\n"
 "┈╭━┻╮╲┗━━━━╮╭╮┈\n"
 "┈┃▎▎┃╲╲╲╲╲╲┣━╯┈\n"
@@ -285,7 +285,7 @@ P = ("███████▄▄███████████▄\n"
 async def bluedevilmonster(monster):
     await eor(monster, A)
 
-@ultroid_cmd(pattern=r"pig")
+@ultroid_cmd(pattern=r"panii")
 async def bluedevilpig(pig):
     await eor(pig, B)
 
@@ -297,11 +297,11 @@ async def bluedevilkiller(killer):
 async def bluedevilgun(gun):
     await eor(gun, D)
 
-@ultroid_cmd(pattern=r"dog")
+@ultroid_cmd(pattern=r"asu")
 async def bluedevildog(dog):
     await eor(dog, E)    
 
-@ultroid_cmd(pattern=r"hello")
+@ultroid_cmd(pattern=r"hai")
 async def bluedevilhello(hello):
     await eor(hello, F)
 
@@ -321,15 +321,15 @@ async def bluedevilsupreme(supreme):
 async def bluedevilindia(india):
     await eor(india, J)
 
-@ultroid_cmd(pattern=r"wc")
+@ultroid_cmd(pattern=r"welkom")
 async def bluedevilwelcome(welcome):
     await eor(welcome, K)
 
-@ultroid_cmd(pattern=r"snk")
+@ultroid_cmd(pattern=r"ulo")
 async def bluedevilsnake(snake):
     await eor(snake, L) 
 
-@ultroid_cmd(pattern=r"cat")
+@ultroid_cmd(pattern=r"kucing")
 async def bluedevilded(cat):
     await eor(cat, M)
 
@@ -341,11 +341,11 @@ async def bluedevilbye(e):
 async def bluedevilshitos(e):
     await eor(e, O)
 
-@ultroid_cmd(pattern=r"dislike")
+@ultroid_cmd(pattern=r"hu")
 async def bluedevildislike(e):
     await eor(e, P)
 
-@ultroid_cmd(pattern="stupid$")
+@ultroid_cmd(pattern="goblok$")
 async def snku(ult):
     ult = await eor(ult, "`...`")
     animation_interval = 1
@@ -366,6 +366,7 @@ async def snku(ult):
         "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n          (> ^_^)>🧠🗑",
         "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           (> ^_^)>🗑",
         "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           <(^_^ <)🗑",
+        GOOOOBBBBBBLLOOOOOOOOOOOK JANCKOK!!
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -399,7 +400,7 @@ async def snku(ult):
     await asyncio.sleep(2)
 
 
-@ultroid_cmd(pattern=r"call$")
+@ultroid_cmd(pattern=r"durov$")
 async def snku(ult):
     ult = await eor(ult, "`...`")
     animation_interval = 3
@@ -473,7 +474,7 @@ async def snku(ult):
         await ult.edit(animation_chars[i % 10])        
 
 
-@ultroid_cmd(pattern=f"hypno$")
+@ultroid_cmd(pattern=f"hipno$")
 async def snku(ult):
     ult = await eor(ult, "`>>>`")
     animation_interval = 0.3
@@ -519,7 +520,7 @@ async def snku(ult):
     await ult.edit("EVERyBOdy iZ GangSTur UNtIL I ArRivE 🔥🔥🔥")
 
 
-@ultroid_cmd(pattern=f"charging$")
+@ultroid_cmd(pattern=f"cas$")
 async def snku(e):
     txt = (
         e.text[10:]
@@ -539,7 +540,7 @@ async def snku(e):
     )
 
 
-@ultroid_cmd(pattern=r"lul$")
+@ultroid_cmd(pattern=r"lol$")
 async def snku(ult):
     ult = await eor(ult, "`...`")
     deq = deque(list("😂🤣😂🤣😂🤣"))
@@ -549,7 +550,7 @@ async def snku(ult):
         deq.rotate(1)
 
 
-@ultroid_cmd(pattern=r"nothappy$")
+@ultroid_cmd(pattern=r"sedih$")
 async def snku(ult):
     ult = await eor(ult, "`...`")
     deq = deque(list("😁☹️😁☹️😁☹️😁"))
@@ -579,7 +580,7 @@ async def snku(ult):
         deq.rotate(1)
 
 
-@ultroid_cmd(pattern="heart$")
+@ultroid_cmd(pattern="love$")
 async def snku(ult):
     ult = await eor(ult, "`...`")
     deq = deque(list("❤️🧡💛💚💙💜🖤"))
@@ -599,7 +600,7 @@ async def snku(ult):
         deq.rotate(1)
 
 
-@ultroid_cmd(pattern="earth$")
+@ultroid_cmd(pattern="bumi$")
 async def snku(ult):
     ult = await eor(ult, "~~~")
     deq = deque(list("🌏🌍🌎🌎🌍🌏🌍🌎"))
@@ -619,7 +620,7 @@ async def snku(ult):
         deq.rotate(1)
 
 
-@ultroid_cmd(pattern="candy$")
+@ultroid_cmd(pattern="permen$")
 async def snku(ult):
     ult = await eor(ult, "...")
     deq = deque(list("🍦🍧🍩🍪🎂🍰🧁🍫🍬🍭"))
@@ -693,7 +694,7 @@ async def snku(ult):
         await ult.edit(animation_chars[i % 32])
 
 
-@ultroid_cmd(pattern="clown$")
+@ultroid_cmd(pattern="badut$")
 async def snku(ult):
     ult = await eor(ult, "....")
     animation_interval = 0.50
@@ -1389,7 +1390,7 @@ async def snku(ult):
         await ult.edit(animation_chars[i % 4])
 
 
-@ultroid_cmd(pattern="hart( (.*)|$)")
+@ultroid_cmd(pattern="lovee( (.*)|$)")
 async def snku(ult):
     ult = await eor(ult, "...")
     animation_interval = 0.5
@@ -1434,7 +1435,7 @@ async def snku(ult):
         await ult.edit(animation_chars[i % 6])
 
 
-@ultroid_cmd(pattern="monkey( (.*)|$)")
+@ultroid_cmd(pattern="monyet( (.*)|$)")
 async def snku(ult):
     ult = await eor(ult, "..")
     animation_interval = 2
@@ -1515,7 +1516,7 @@ async def snku(ult):
         await ult.edit(animation_chars[i % 13])
 
 
-@ultroid_cmd(pattern="theart( (.*)|$)")
+@ultroid_cmd(pattern="heart( (.*)|$)")
 async def snku(ult):
     ult = await eor(ult, "...")
     animation_interval = 0.3
