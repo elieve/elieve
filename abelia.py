@@ -6,7 +6,7 @@ async def bye(ult):
  await ult.edit("ABELIA JELEK! GAPUNYA PACAR YGY")
  sleep(1)
 
- await ult.edit("""
+await ult.edit("""
  
          ┏━━┳┓╋╋┏┳━━━┓
          ┃┏┓┃┗┓┏┛┃┏━━┛
@@ -15,8 +15,8 @@ async def bye(ult):
          ┃┗━┛┃┃┃╋┃┗━━┓
          ┗━━━┛┗┛╋┗━━━┛
          """)
-   sleep(1)
-   await edit_or_reply(
+ sleep(1)
+ await edit_or_reply(
         event,
         "┈┈┏━╮╭━┓┈╭━━━━╮\n"
         "┈┈┃┏┗┛┓┃╭┫Bocil┃\n"
@@ -29,8 +29,8 @@ async def bye(ult):
     )
 
 
-    sleep(1)
-    await edit_or_reply(
+ sleep(1)
+ await edit_or_reply(
         event,
         "╥━━━━━━━━╭━━╮━━┳\n"
         "╢╭╮╭━━━━━┫┃▋▋━▅┣\n"
