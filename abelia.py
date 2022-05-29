@@ -2,11 +2,11 @@ import asyncio
 from time import sleep
 
 @ultroid_cmd(pattern="abel")
-async def bye(ult):
+async def bye _(ult):
  await ult.edit_or_reply("ABELIA JELEK! GAPUNYA PACAR YGY")
  sleep(1)
 
-await ult.edit("""
+ await ult.edit("""
  
 ┏━━┳┓╋╋┏┳━━━┓
 ┃┏┓┃┗┓┏┛┃┏━━┛
