@@ -40,8 +40,9 @@ B = ("┈┈┏━╮╭━┓┈╭━━━━╮\n"
 "┈╰━┳┻▅╯╲╲╲╲┃┈┈┈\n"
 "┈┈┈╰━┳┓┏┳┓┏╯┈┈┈\n"
 "┈┈┈┈┈┗┻┛┗┻┛┈┈┈┈\n"
-    SEMANGAT YUK
-     SEMBUH YGY)
+"SEMBUH YGY"
+"SEMANGAN YUK PAN"
+"PANI BISA SEMBUH KOK")
 
 D = ("░▐█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄\n"
 "░███████████████████████ \n"
