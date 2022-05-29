@@ -14,7 +14,8 @@ async def bye(ult):
          ┃┏━┓┣┓┏┛┃┏━━┛
          ┃┗━┛┃┃┃╋┃┗━━┓
          ┗━━━┛┗┛╋┗━━━┛
-         (
+   async def _(event):
+   await edit_or_reply(
         event,
         "┈┈┏━╮╭━┓┈╭━━━━╮\n"
         "┈┈┃┏┗┛┓┃╭┫Ngok ┃\n"
@@ -27,7 +28,8 @@ async def bye(ult):
     )
 
 
-        (
+    async def _(event):
+    await edit_or_reply(
         event,
         "╥━━━━━━━━╭━━╮━━┳\n"
         "╢╭╮╭━━━━━┫┃▋▋━▅┣\n"
