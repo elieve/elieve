@@ -34,6 +34,7 @@ async def bye(ult):
         "╢╰━┫┈┈┈┈┈╰╯╰┳━╯┣\n"
         "╢┊┊┃┏┳┳━━┓┏┳┫┊┊┣\n"
         "╨━━┗┛┗┛━━┗┛┗┛━━┻\n",
- 
+        
+        NYEEEE NYEEE BOCIL
 
-  NYEE NYEE NYEEE
+
