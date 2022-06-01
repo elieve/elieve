@@ -4,7 +4,7 @@ from secrets import choice
 
 from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice
 
-from userbot.utils import edit_or_reply, Ultroid_cmd
+from userbot.utils import edit_or_reply,
 
 
 @Ultroid_cmd(pattern="asupan$")
