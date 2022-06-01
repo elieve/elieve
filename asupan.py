@@ -4,10 +4,10 @@ from secrets import choice
 
 from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice
 
-from userbot.utils import edit_or_reply
+from userbot.utils import edit_or_reply,
 
 
-@Ultroid_cmd(pattern="asupan$")
+@ultroid_cmd(pattern="asupan$")
 async def _(event):
     xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
     try:
@@ -25,7 +25,7 @@ async def _(event):
         await xx.edit("**Tidak bisa menemukan video asupan.**")
 
 
-@Ultroid_cmd(pattern="desahcewe$")
+@ultroid_cmd(pattern="desahcewe$")
 async def _(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await edit_or_reply(
@@ -47,7 +47,7 @@ async def _(event):
         await xx.edit("**Tidak bisa menemukan desahan cewe.**")
 
 
-@Ultroid_cmd(pattern="desahcowo$")
+@ultroid_cmd(pattern="desahcowo$")
 async def _(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await edit_or_reply(
