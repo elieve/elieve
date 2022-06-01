@@ -34,8 +34,8 @@ async def _(event):
     try:
         desahanya = [
             desahan
-            async for voice in event.client.iter_messages(
-                "@desahanakudisini", filter=InputMessagesFilterVideo
+            async for desahan in event.client.iter_messages(
+                "@desahanakudisini", filter=InputMessagesFilterVoiceNote
             )
         ]
         await event.client.send_file(
@@ -51,9 +51,9 @@ async def _(event):
     xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
     try:
         asupannya = [
-            asupan
-            async for Forwaded in event.client.iter_messages(
-                "https://t.me/+piSYhLOpclY4OGY9", filter=InputMessagesFilterVideo
+            aaaasupan
+            async for aaasupan in event.client.iter_messages(
+                "@fakyudurov", filter=InputMessagesFilterVideo
             )
         ]
         await event.client.send_file(
