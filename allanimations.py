@@ -33,16 +33,16 @@ A = ("▄███████▄\n"
 "_████\n")
 
 B = ("┈┈┏━╮╭━┓┈╭━━━━╮\n"
-"┈┈┃┏┗┛┓┃╭┫PANIII┃\n"
+"┈┈┃┏┗┛┓┃╭┫NGOK!!┃\n"
 "┈┈╰┓▋▋┏╯╯╰━━━━╯\n"
 "┈╭━┻╮╲┗━━━━╮╭╮┈\n"
 "┈┃▎▎┃╲╲╲╲╲╲┣━╯┈\n"
 "┈╰━┳┻▅╯╲╲╲╲┃┈┈┈\n"
 "┈┈┈╰━┳┓┏┳┓┏╯┈┈┈\n"
 "┈┈┈┈┈┗┻┛┗┻┛┈┈┈┈\n"
-"SEMBUH YGY\n"
-"SEMANGAN YUK PAN\n"
-"PANI BISA SEMBUH KOK\n")
+"BAYU GANTENG\n"
+"GANTENG BANGET\n"
+"EMANG BAYU GANTENG\n")
 
 D = ("░▐█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄\n"
 "░███████████████████████ \n"
@@ -288,19 +288,19 @@ P = ("███████▄▄███████████▄\n"
 async def bluedevilmonster(monster):
     await eor(monster, A)
 
-@ultroid_cmd(pattern=r"panii")
+@ultroid_cmd(pattern=r"babi")
 async def bluedevilpig(pig):
     await eor(pig, B)
 
-@ultroid_cmd(pattern=r"killer")
+@ultroid_cmd(pattern=r"kill")
 async def bluedevilkiller(killer):
     await eor(killer, C)
 
-@ultroid_cmd(pattern=r"gun")
+@ultroid_cmd(pattern=r"dor")
 async def bluedevilgun(gun):
     await eor(gun, D)
 
-@ultroid_cmd(pattern=r"asu")
+@ultroid_cmd(pattern=r"ajg")
 async def bluedevildog(dog):
     await eor(dog, E)    
 
@@ -312,7 +312,7 @@ async def bluedevilhello(hello):
 async def bluedevilhmf(hmf):
     await eor(hmf, G)
 
-@ultroid_cmd(pattern=r"couple")
+@ultroid_cmd(pattern=r"mesum")
 async def bluedevilcouple(couple):
     await eor(couple, H)
 
@@ -960,7 +960,7 @@ async def snku(ult):
         await ult.edit(animation_chars[i % 10])
 
 
-@ultroid_cmd(pattern="loveu")
+@ultroid_cmd(pattern="lup")
 async def snku(ult):
     animation_interval = 0.5
     animation_ttl = range(0, 70)
@@ -1007,7 +1007,7 @@ async def snku(ult):
         await ult.edit(animation_chars[i % 35])
 
 
-@ultroid_cmd(pattern="plane")
+@ultroid_cmd(pattern="pesawat")
 async def snku(ult):
     ult = await eor(ult, "✈-------------")
     await ult.edit("-✈------------")
@@ -1393,7 +1393,7 @@ async def snku(ult):
         await ult.edit(animation_chars[i % 4])
 
 
-@ultroid_cmd(pattern="lovee( (.*)|$)")
+@ultroid_cmd(pattern="love2( (.*)|$)")
 async def snku(ult):
     ult = await eor(ult, "...")
     animation_interval = 0.5
