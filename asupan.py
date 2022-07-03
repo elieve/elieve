@@ -2,7 +2,7 @@
 
 from secrets import choice
 
-from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice_Note
+from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice
 
 from userbot.utils import edit_or_reply
 
@@ -35,7 +35,7 @@ async def _(event):
         desahanya = [
             desahan
             async for desahan in event.client.iter_messages(
-                "@desahancewesangesange", filter=InputMessagesFilterVoice_Note
+                "@desahancewesangesange", filter=InputMessagesFilterVoice
             )
         ]
         await event.client.send_file(
