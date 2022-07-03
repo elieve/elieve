@@ -2,13 +2,13 @@
 
 from secrets import choice
 
-from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice
+from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice_Note
 
 from userbot.utils import edit_or_reply
 
 
 
-@ultroid_cmd(pattern="aasupan$")
+@ultroid_cmd(pattern="asupan$")
 async def _(event):
     xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
     try:
@@ -35,7 +35,7 @@ async def _(event):
         desahanya = [
             desahan
             async for desahan in event.client.iter_messages(
-                "@desahanakudisini", filter=InputMessagesFilterVoice
+                "@desahancewesangesange", filter=InputMessagesFilterVoice_Note
             )
         ]
         await event.client.send_file(
@@ -46,13 +46,15 @@ async def _(event):
         await xx.edit("**Tidak bisa menemukan vn desah.**")
         
         
-@ultroid_cmd(pattern="aaasupan$")
+@ultroid_cmd(pattern="bokep$")
+             
+
 async def _(event):
     xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
     try:
         asupannya = [
-            aaasupan
-            async for aaasupan in event.client.iter_messages(
+            bokep
+            async for bokep in event.client.iter_messages(
                 "@fakyudurov", filter=InputMessagesFilterVideo
             )
         ]
