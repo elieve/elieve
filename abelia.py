@@ -4,7 +4,7 @@ from time import sleep
 @ultroid_cmd(pattern="me")
 async def _(xx):
  me = await xx.client.get_me()
- xxx = await edit("HAI JELEK!")
+ xxx = await xx.client.send_message("HAI JELEK!")
  await asyncio.sleep(3)
  await xxx.edit(xx, f"**KENALIN NIH {me.mention}**")
  await asyncio.sleep(1)
