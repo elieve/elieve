@@ -1,11 +1,17 @@
 import asyncio
 from time import sleep
 
-@ultroid_cmd(pattern="ibel")
+@ultroid_cmd(pattern="me")
 async def ibel(xx):
- await xx.edit("ABELIA JELEK! GAPUNYA PACAR YGY")
+ await xx.edit("HAI JELEK!")
  await asyncio.sleep(3)
- await xx.edit("Enur yang paling cantik ygy")
+ await xx.edit("KENALIN NIH {me.first_name}")
+ await asyncio.sleep(1)
+ await xx.edit("{me.first_name} ORANG PALING CAKEP SE TELEGRAM")
+ await asyncio.sleep(1)
+ await xx.edit("GAK KEK ELU")
+ await asyncio.sleep(1)
+ await xx.edit("HEHEHE")
  await asyncio.sleep(1)
  await xx.edit("Run! Run! Runn!!!")
  await asyncio.sleep(1)
@@ -17,7 +23,7 @@ async def ibel(xx):
 ┃┏━┓┣┓┏┛┃┏━━┛
 ┃┗━┛┃┃┃╋┃┗━━┓
 ┗━━━┛┗┛╋┗━━━┛
-Mwa Mwa
+MWAHH
        
  """)
 
