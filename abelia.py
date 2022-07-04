@@ -2,7 +2,7 @@ import asyncio
 from time import sleep
 
 @ultroid_cmd(pattern="me")
-async def ibel(xx):
+async def _(event):
  me = await event.client.get_me()
  await xx.edit("HAI JELEK!")
  await asyncio.sleep(3)
