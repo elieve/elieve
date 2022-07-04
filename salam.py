@@ -15,7 +15,7 @@ async def _(event):
 @ultroid_cmd(pattern="o(?: |$)(.*)")
 async def _(event):
     await event.client.send_message(
-      Assalamualaikum Warahmatullahi Wabarakatuh**",
+      "**Assalamualaikum Warahmatullahi Wabarakatuh**",
         reply_to=event.reply_to_msg_id,
     )
     await event.delete()
