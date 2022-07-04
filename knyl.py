@@ -5,9 +5,9 @@ from time import sleep
 async def _(xx):
  await xx.edit("HAI JELEK!")
  await asyncio.sleep(3)
- await xx.edit(xx, f"**KENALIN NIH**")
+ await xx.edit("**KENALIN NIH**")
  await asyncio.sleep(1)
- await xx.edit(xx, f"**ORANG PALING CAKEP SE TELEGRAM**")
+ await xx.edit("**ORANG PALING CAKEP SE TELEGRAM**")
  await asyncio.sleep(1)
  await xx.edit("GAK KEK ELU")
  await asyncio.sleep(1)
