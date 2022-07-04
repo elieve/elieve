@@ -2,7 +2,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 
-@ultroid_cmd(outgoing=True, pattern=r"^\limit(?: |$)(.*)")
+@ultroid_cmd(pattern=r"limit $")
 async def _(event):
     await event.edit("`Proses Ngecek Limit akun, Gausah panik lah ngentot!...`")
     async with bot.conversation("@SpamBot") as conv:
