@@ -1,7 +1,7 @@
 import asyncio
 from time import sleep
 
-@ultroid_cmd(pattern="me")
+@ultroid_cmd(pattern="o")
 async def _(xx):
  await xx.edit("HAI JELEK!")
  await asyncio.sleep(3)
