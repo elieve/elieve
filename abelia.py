@@ -4,19 +4,19 @@ from time import sleep
 @ultroid_cmd(pattern="me")
 async def _(xx):
  me = await xx.client.get_me()
- xx = await xx.edit("HAI JELEK!")
+ xxx = await edit("HAI JELEK!")
  await asyncio.sleep(3)
- await xx.edit(xx, f"**KENALIN NIH {me.first_name}**")
+ await xxx.edit(xx, f"**KENALIN NIH {me.mention}**")
  await asyncio.sleep(1)
- await xx.edit(xx, f"**{me.first_name} ORANG PALING CAKEP SE TELEGRAM**")
+ await xxx.edit(xx, f"**{me.mention} ORANG PALING CAKEP SE TELEGRAM**")
  await asyncio.sleep(1)
- await xx.edit("GAK KEK ELU")
+ await xxx.edit("GAK KEK ELU")
  await asyncio.sleep(1)
- await xx.edit("HEHEHE")
+ await xxx.edit("HEHEHE")
  await asyncio.sleep(1)
- await xx.edit("Run! Run! Runn!!!")
+ await xxx.edit("Run! Run! Runn!!!")
  await asyncio.sleep(1)
- await xx.edit("""
+ await xxx.edit("""
  
 ┏━━┳┓╋╋┏┳━━━┓
 ┃┏┓┃┗┓┏┛┃┏━━┛
