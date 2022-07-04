@@ -26,10 +26,6 @@ async def _(event):
 
 @ultroid_cmd(pattern="desahcowo$")
 async def _(event):
-    if event.chat_id in BLACKLIST_CHAT:
-        return await edit_or_reply(
-            event, "**Perintah ini Dilarang digunakan di Group ini**"
-        )
     xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
     try:
         desahcowo = [
