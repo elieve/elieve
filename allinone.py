@@ -2,7 +2,468 @@ import asyncio
 import random
 from . import *
 from collections import deque
+from userbot import *
+from userbot.utils import admin_cmd
+from telethon.tl.types import Channel, Chat, User
+from telethon.tl import functions, types
+from telethon.tl.functions.messages import  CheckChatInviteRequest, GetFullChatRequest
+from telethon.errors import (ChannelInvalidError, ChannelPrivateError, ChannelPublicGroupNaError, InviteHashEmptyError, InviteHashExpiredError, InviteHashInvalidError)
+from telethon.tl.functions.channels import GetFullChannelRequest, GetParticipantsRequest
+from time import sleep
+from telethon import events
+from telethon.errors.rpcerrorlist import YouBlockedUserError
+#create by Bagaskara
+#Yang Copas Doang, Lu kontol
 
+@ultroid_cmd(outgoing=True, pattern="tiktok(?: |$)(.*)")
+async def _(event):
+    if event.fwd_from:
+        return
+    d_link = event.pattern_match.group(1)
+    if ".com" not in d_link:
+        await event.edit("`Mohon Maaf, Saya Membutuhkan Link Video Tiktok Untuk Mendownload Nya`")
+    else:
+        await event.edit("```Video Sedang Diproses.....```")
+    chat = "@ttsavebot"
+    async with bot.conversation(chat) as conv:
+        try:
+            msg_start = await conv.send_message("/start")
+            r = await conv.get_response()
+            msg = await conv.send_message(d_link)
+            details = await conv.get_response()
+            video = await conv.get_response()
+            """ - don't spam notif - """
+            await bot.send_read_acknowledge(conv.chat_id)
+        except YouBlockedUserError:
+            await event.edit("**Kesalahan:** `Mohon Buka Blokir` @ttsavebot `Dan Coba Lagi !`")
+            return
+        await bot.send_file(event.chat_id, video)
+        await event.client.delete_messages(conv.chat_id,
+                                           [msg_start.id, r.id, msg.id, details.id, video.id])
+        await event.delete()
+
+
+@ultroid_cmd(outgoing=True, pattern='w(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(2)
+    await typew.edit("**Woi Jancok !**")
+    sleep(2)
+    await typew.edit("**Lu Tau ga ? Lu itu Djancok Gausah Sok Keras !**")
+    sleep(2)
+    await typew.edit("**Muka Lu Kayak Kontol**")
+
+
+@ultroid_cmd(outgoing=True, pattern='e(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(2)
+    await typew.edit("**Huek Cuih !**")
+    sleep(2)
+    await typew.edit("**Sempak Lu Kagak Pernah Ganti Ya !**")
+    sleep(2)
+    await typew.edit("**Pantes Kontol Lu Burik**")
+    sleep(2)
+    await typew.edit("**Order Vcs Aja Gaada Yang Mau Gblk !**")
+    sleep(2)
+    await typew.edit("**Makanya Jadi Orang Cakepan Dikit Kontol !**")
+    sleep(2)
+    await typew.edit("**Mending Lu Diem Unggas !!**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(2)
+    await typew.edit("**Jangan kek anjing lu pada !**")
+    sleep(2)
+    await typew.edit("**Djancok Lu !**")
+
+
+@ultroid_cmd(outgoing=True, pattern='t(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("**Gua kasih tau nih buat lu bocah kontol !**")
+    sleep(3)
+    await typew.edit("**kalo ngomongin kasta ama anak WH !**")
+    sleep(3)
+    await typew.edit("**derajat lu tu ama anak WH beda jauh kontol**")
+    sleep(3)
+    await typew.edit("**nih ya bapak lu sama Mak lu itu babu gua !**")
+    sleep(3)
+    await typew.edit("**sering ngemut kontol gua, sering ngelap kaki gua !**")
+    sleep(3)
+    await typew.edit("**terus ni ya mending lu kerja sama gua !!**")
+    sleep(3)
+    await typew.edit("**kasiaan bego rumah lu tu dari kayu !!**")
+    sleep(3)
+    await typew.edit("**bocah micin goblok yg bisa nya main tiktok sama fb !!**")
+    sleep(3)
+    await typew.edit("**yg kadang kalo sange liat bokep trus coli !!**")
+    sleep(3)
+    await typew.edit("**gw kasih tau nih ya, keluarga lu udh gua kencingin 7 turunan !!**")
+    sleep(3)
+    await typew.edit("**emak lu aja pas sange minta ngentot ama gw !!**")
+    sleep(3)
+    await typew.edit("**bapaklu rela jadi banci demi ngidupin lu biar bisa makan !!**")
+    sleep(3)
+    await typew.edit("**sedih banget gw liat kehidupan lu yang hina itu !!**")
+    sleep(3)
+    await typew.edit("**mending sini abang ajarin jadi wibu yang berkelas dek !!**")
+    sleep(3)
+    await typew.edit("**dan ter keren sejagad telegram !!**")
+    sleep(2)
+    await typew.edit("**Wibu Human Nih Boss Senggol Dong !!**")
+
+
+@ultroid_cmd(pattern="p(?: |$)(.*)")
+async def _(event):
+    await event.client.send_message(
+        event.chat_id,
+        "**Assalamualaikum Dulu Biar Sopan**",
+        reply_to=event.reply_to_msg_id,
+    )
+    await event.delete()
+
+
+
+
+
+@ultroid_cmd(pattern="P(?: |$)(.*)")
+async def _(event):
+    me = await event.client.get_me()
+    xx = await edit_or_reply(event, f"**Haii Salken Saya {me.first_name}**")
+    await asyncio.sleep(2)
+    await xx.edit("**Assalamualaikum...**")
+
+
+@ultroid_cmd(pattern="l(?: |$)(.*)")
+async def _(event):
+    await event.client.send_message(
+        event.chat_id, "**Wa'alaikumsalam**", reply_to=event.reply_to_msg_id
+    )
+    await event.delete()
+
+
+@ultroid_cmd(pattern="i(?: |$)(.*)")
+async def _(event):
+    me = await event.client.get_me()
+    xx = await edit_or_reply(event, f"**Haii Salken Saya {me.first_name}**")
+    await asyncio.sleep(2)
+    await xx.edit("**Assalamualaikum**")
+
+
+@ultroid_cmd(pattern="j(?: |$)(.*)")
+async def _(event):
+    xx = await edit_or_reply(event, "**JAKA SEMBUNG BAWA GOLOK**")
+    await asyncio.sleep(3)
+    await xx.edit("**NIMBRUNG GOBLOKK!!!🔥**")
+
+
+@ultroid_cmd(pattern="k(?: |$)(.*)")
+async def _(event):
+    me = await event.client.get_me()
+    xx = await edit_or_reply(event, f"**Hallo KIMAAKK SAYA {me.first_name}**")
+    await asyncio.sleep(2)
+    await xx.edit("**LU SEMUA NGENTOT 🔥**")
+
+
+@ultroid_cmd(pattern="s(?: |$)(.*)")
+async def _(event):
+    xx = await edit_or_reply(event, "**Salam Dulu Biar Sopan**")
+    await asyncio.sleep(2)
+    await xx.edit("**السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ**")
+
+
+
+
+@ultroid_cmd(pattern=r"limit(?: |$)(.*)")
+async def _(event):
+    await event.edit("`Proses Ngecek Limit akun, Gausah panik lah ngentot!...`")
+    async with bot.conversation("@SpamBot") as conv:
+        try:
+            response = conv.wait_event(
+                events.NewMessage(incoming=True, from_users=178220800)
+            )
+            await conv.send_message("/start")
+            response = await response
+            await bot.send_read_acknowledge(conv.chat_id)
+        except YouBlockedUserError:
+            await event.edit("`Boss! Please Unblock @SpamBot`")
+            return
+        await event.edit(f"~ {response.message.message}")
+
+@ultroid_cmd(outgoing=True, pattern='r1(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**EH MANUSIA HARAM YANG KERJAANYA REBAHAN, GAUSAH SOK SOK MENILAI HIDUP ORANG DEH LO BANGSAT, LO SENDIRI AJA GA MAMPU BUAT MAKAN GOBLOK KARNA LU GEMBEL KERJA LO PASTI JADI MANUSIA SILVER YANG KAN, NAH MAKANYA DARIPADA KEBANYAKAN NGURUSIN HIDUP ORAMG, MENDING LU CAT BADAN LU BURUAN ABISTU KERJA DAH NGEMIS NGEMIS KALO GAK MATUNG DI PINGGIR JALAN, YAHAHA KAYA BOCAH GA PUNYA KREATIFITAS ATAU MEMANG LO PUNYA KELAINAN DISABILITAS, YANG KELIATAN IDIOT TUU, PASTI JUGA LU LULUSAN SLB YAKAN BAGIAN ORANG ORANG YG KENA GANGGUAN JIWA ATAU PUNYA KELAINAN TU YKANN YAHAHAHAH WAHYOUEEEE🤪🤪**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r2(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**INI NI KALO ANAK LONTE BERHASIL DI LAHIRKAN ANJING, EMAK LO GABISA GUGURIN DAN LO LAHIR SEBAGAI ANAK HARAM, KASIAN BANGET LO ANJING DARI MASA KANDUNGAN LO DI EMAK LO, UDAH GADA BAPAK, YA IYALAH ANJING ORANG ANAK LONTE, TUBUH LO ITU ADALAH CAMPURAN DARI SEMUA PELANGGAN EMAK LO NGENTOD, NAH KEBETULAN PAS KEBABLASAN EMAK LO LUPA MINUM PIL KB, JADI HAMIL KAN, UDAH LA NGENTOD MENDING LO BUNUH DIRI AJA, GA PANTES BANGET LO DI DUNIA INI ANJING!!!**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r3(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**WOI ALIANSI SAMPAH, NI DENGERIN YA, GC LO SEPI PASTI KAN, MAKANYA LO NGERUSUH DI GC ORANG TERUS NGAJAK WAR MANA PAKE CUAN LAGI, GUA TAU LU NGAJAK MAIN CUAN PASTI KARNA EKONOMI KELUARGALO LAGI RENDAH ANJING, YA IYALAH BAPAK LO PENGANGGURAN, EH GA DA BAPA KAYANYA, NAH EMAK LO LUMPUH KERJAAN NYA REBAHAN, MAU KEKAMAR MANDI AJA HARUS DI GOTONG KAN, YAHAHA CACAT BANGET ANJING, LO JUGA TERMASUK ORANG CACAT, MANA BIBIR SUMBING TANGAN TREMOR, UDAH COCOK BGT BUAT LO MATI BERDUA EMAK LO YAHAHAH NGENTOD ALIANSI SAMPAH!!!**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r4(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**MASIH JAMAN NGERUSUH SANA SINI, TERUS PAS DI LADENIN MALAH LARI?, KALO BRANI NGAJAK WAR ORANG YA PAKE KONSEKUENSI LAH TOLOL, KALO CUMA NGATA NGATAIN BEGITU, BOCIL FF JUGA BISA TOLOL, DAN KALO NGAJAK WAR TAPI ALIBI MULU, DI AJAKIN PAKE KONSEKUENSI KAGAK MAO, DI TANTANG MAIN SESI KABUR KABURAN MULU, MENDING LO WAR AJA SAMA BOCAH TK TOLOL, BRANI WAR LGSG AJA KE ALFAM BEGO, ITU JUGA KALO LU BRANI YA, KALO CUPU MAH BUBARIN AJA TU ALIANSI LO YG GA BERGUNA ITU ANIJINGGGGG!!!!**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r5(?: |$)(.*)')
+
+async def r1(xx):
+    await xx.edit("**NIH YA ANAK BABI, GUA KASIH TAU KE LU NIH, LU ITU DISINI CUMA JADI KACUNG GUA NGENTOD, YANG SABAN HARI GUA INJEK INJEK TU BATANG LEHER LU, YG TIAP HARI GUA SURUH SURUH NGELAPIN KAKI GUA, GAUSAH SOK KERAS TOLOL, BAPAK LO LAGI MULUNG NOH DI PEREMPATAN, NUNGGUIN SAMPAH SAMPAH PLASTIK TOLOL, MANA PAKE BAJU PARTAI UDH DEKIL BAT KUMEL ANJING KAYA MASA DEPAN LO YG SURAM, JANGAN BELAGU APA, GUA TAU LO SKOLA CUMA SAMPE LULUSAN SD KAN? YAHAHA KETAWAN BANGET DARI NASIB LU YG MENGENASKAN.**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r6(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**YA AMPUN, UMUR UDAH TUA MAO MATI UDAH BAU TANAH ANJING, MASIH AJA NYENGGOL SANA SINI, PIKIRIN AJA KISAH HIDUP LU YG KELAM SAMPEL SEKARANG TOLOL, BANTUIN KEK KELUARGA LU YG KEKURANG EKONOMI, NGAPAIN KEK JUAL DIRI KEK, BIAR ADA HASIL BEGO, GUA SEBENARNYA KASIHAN SAMA LU SIH, UDAH JELEK ITEM MUKA UDAH KEK LINTINGAN DAKI BEGITU, BANGSAT BANGET NAJIS DEH GUA AMA LU.**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r7(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**UDAH LAH, MENDING LO CABUT AJA DARI SINI, SOAL NYA GUA GAMAU ANJING LIAT MANUSIA SAMPAH KAYAK LO ADA DI TELEGRAM, LEBIH TEPAT NYA MENDING LO DOWNLOAD MICHAT NAH ABIS TU LU NGELOTE ANJING, COCOK BANGET SOAL NYA BUAT LO ASU!!!!**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r8(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**DARI PENILAIAN GUA NI YA, KEBANYAKAN DARI LO ITU CUMA JELEK NYA DOANG ANJING KAGA ADA BAGUS BAGUS NYA LO DI MATA GUA, KEK LIAT TAI BABI GUA KALO LIATIN MUKA LO, YA IYALAH ORANG TERLAHIR DARI EMAK YG PENYAKITAN, MEMEK NYA KENA RAJA SINGAN YAHAHA, TERLALU KASAR GUA, MAAF YA, EH TAPI EMG PANTES LO DI KATA KATAIN KAYA GITU, UDAH COCOK BANGET LO NYUSUL BAPAK LO SANA KE KUBURAN, MANA GA PERNAH DI DOAIN LAGI TU PASTI BAPAK LO YKAN, LAGI DI SIKSA MALAIKAT, GA ADA PENGAMPUNAN GARA GARA LO GA PERNAH DOA, YA GIMANA MAO DOA ORANG SELAMA LO HIDUP KERJAAN NYA CUMA MAEN TELEGRAM DOANG, NGEBACOT DOANG ANJINGG, GA PERNAH NGAJI GA PERNAH BELAJAR AGAMA PASTI, MAKANYA LO TUH MIS ATTITUDE, MIS AKHLAK PULA ADUHHHH ANAK NGENTOD.**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r9(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**GAUSAH SOK SOK AN NYENGGOL GUA ANJING, TAR GUA AJAKIN SESI, LO LARI, GUA AJAKIN BIKIN KONSEKUENSI LO BANYAK ALIBI, YAHAHA SSMPAH BANGET LO NGENTOD, UDAH LAH MENDING LO PERGI JAUH JAUH DARI MATA GUA, JIJI BAT LIATNYA CUIHHKKKK.**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r10(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**NIH NIH GUA KASIH BANSOS DEH BUAT LO, LO BELOM PERNAH NGERASAIN MAKAN SARDEN KAN? YAHAHA KASIAN BANGET HIDUP LU YG SABAN HARI MAKAN NASI SAMA GAREM DOANG ANJING, MAKANYA OTAK LO BEGOOO, MANA PASTI SKALINYA MAKAN ENAK, LO CUMA GORENG TELOR AJA KAN, PAKE MICIN YG BANYAK, EMG BOCAH MICIN ANJING, RADA TOLOL SI GUA KALO NGELADENIN LO YG CUMA BISA NGANG NGENG NGONG DOANG ANJING, YA IYA KARNA LO, EMG GA ADA BAKAT APA APA ANJING DI TELEGRAM, CABUT BURUAN CABUT TAR GUA GBAN AMA GUA LO NGENTOD.**")
+
+
+@ultroid_cmd(outgoing=True, pattern='r11(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**EH BOCAH TOLOL  YANG MUKANYE RATA KEK TEMBOK PENJARA YANG BANYAK KERAK DAKI NARAPIDANA, MULUT LU BAU JIGONG, KUPING CONGEAN KEPALA PITAKAN PANTAT KORENGAN KAKI BUDUKAN KONTOL LO JUGA BISULAN, KALO UDEH BEJAT GAUSAH BEGAJULAN, LU KEBANYAKAN NONTON APLIKASI SI MONTOK SAMBIL COLI DIPOJOKAN DASAR YOHI YOHI YANG OTAK CETEK SKILL PENDEK MUKA GAPTEK YANG KALO MALEM KONTOLNYE DIPAKEIN SOPTEK, EH BOCAH YOHI DEKIL MAKENYE JANGAN KEBANYAKAN LIAT PENTIL, KALO UDEH TOLOL SADAR DIRI, LIAT MUKA LU UDEH KEK KETUMBAR, KETEK LU LDR, DASAR ANAK ANJING PAKIR MISKIN YANG BADANNYE BAU KRIKIL, DASAR ANJING BOCAH INGUSAN YANG KALO LIAT MEMEK LANGSUNG MIMISAN, DIKASIH PAP MUKA LANGSUNG SANGEAN DASAR ABIDIN ANJ,  GINI NIH KLO UDH MISKIN WAWASAN MISKIN PENDIDIKAN MISKIN 7 TURUNAN, EH KONTOL MAKANNYA KLO DISURUH SKLH TUH SKLH TOLOL JGN NGEMIS TRUS, MAK BAPA LU CAPE² NGEMIS KERJAAN DIRUMAH GUA CUMA BUAT PENDIDIKAN LU TOLOL, LU DISURUH SKLH MALAH NGEMIS, NGEGEMBEL, MALAH JADI MANUSIA SILVER LAGI TOLOL, INGET KLO UDH GA BERGUNA DIDUNIA TUH AOWKWWKWIK.**")
+
+@ultroid_cmd(outgoing=True, pattern='r12(?: |$)(.*)')
+async def r1(xx):
+
+    await xx.edit("**ini nih anak yang nyembah babi setiap hari yang kerjaan nya cuma makan kotoran gue, eh tolol malu napa udah juga nyembah babi gak punya emak malah sok sokan mau punya cewek, eh malu ama emak lu di neraka tolol, nih ye gue kasih tau ama lu anak hina yang lahir dari rahim anjing lu deger baik baik, orang tolol kek elu di dunia ini kaga di terima tolol wajah kontol yang beruntusan yang mana wajah nya aja kaga simetris kek pantat kuda, mending lu dirumah makan tai aja kerena apa bocah yang gak punya teman kek elu yang mana dakjal aja gak mau temanan ama lu malah di telegram mau sok kerasa tolol, ni ye gue kasih tau ama lu bocah hina nabi aja malu ada pegikut kek elu yang mana elu nya aja murtad malah jadi bocah tolol di telegram, dakjal aja gak mau temanan ama lu kerena lu itu hina tolol, malu kontol ett dah, ni ya orang miskin kek elu yang mana kerjaan nya cuma ngemis di kota Jakarta kota keras mana mampu lu idup di sana, kerena apa bocah kek elu itu di tabok sekali aja langsung mati tolol, ni lagi ye bocah kek elu yang hp aja hp mito malah sok keras kontol, suara lu aja masih kepedem ama suara gue sokakata masi ambrul aduk malah sok mau ngelawan gue, yang mana kodratnya gue itu tuhan lu tolol bocah kontol apa emak lu gua entotin sekalian yekan gua ijek ijek sekalian pepeknya yekan yehh pake sosoan ngtain org, de klo mau reply gua vn video muka jga ga ush vn yehh, najis bet najis gua goblok ngeladenin bocah bocah kek lu mah cwe jga hina bgt lu ngeladenin cwe kek lu mahapasi dek,dede dede ini masi apa pepeknya masi sempit kan jan sampe om entot yakan itu pepek lu itu yakan gua tau pepek lu itu masi sempit kalau gua masukin otong gua ntar berdarah ya ntar takutnya lu hamil yakan kalau ngga ini apa emak lu gua entotin sekalian yekan gua ijek ijek sekalian pepeknya yekan yehh pake sosoan ngtain org, de klo mau reply gua vn video muka jga ga ush vn yehh, najis bet najis gua goblok ngeladenin bocah bocah kek lu mah cwe jga hina bgt lu ngeladenin cwe kek lu mahapasi dek,dede dede ini masi apa pepeknya masi sempit kan jan sampe om entot yakan itu pepek lu itu yakan gua tau pepek lu itu masi sempit kalau gua masukin otong gua ntar berdarah ya ntar takutnya lu hamil yakan kalau ngga ini apa emak lu gua entotin sekalian yekan gua ijek ijek sekalian pepeknya yekan yehh pake sosoan ngtain org, de klo mau reply gua vn video muka jga ga ush vn yehh, najis bet najis gua goblok ngeladenin bocah bocah kek lu mah cwe jga hina bgt lu ngeladenin cwe kek lu mahapasi dek,dede dede ini masi apa pepeknya masi sempit kan jan sampe om entot yakan itu pepek lu itu yakan gua tau pepek lu itu masi sempit kalau gua masukin otong gua ntar berdarah ya ntar takutnya lu hamil yakan kalau ngga ini apa emak lu gua entotin sekalian yekan gua ijek ijek sekalian pepeknya yekan yehh pake sosoan ngtain org, de klo mau reply gua vn video muka jga ga ush vn yehh, najis bet najis gua goblok ngeladenin bocah bocah kek lu mah cwe jga hina bgt lu ngeladenin cwe kek lu mahapasi dek,dede dede ini masi apa pepeknya masi sempit kan jan sampe om entot yakan itu pepek lu itu yakan gua tau pepek lu itu masi sempit kalau gua masukin otong gua ntar berdarah ya ntar takutnya lu hamil yakan kalau ngga ini apa emak lu gua entotin sekalian yekan gua ijek ijek sekalian pepeknya yekan yehh pake sosoan ngtain org, de klo mau reply gua vn video muka jga ga ush vn yehh, najis bet najis gua goblok ngeladenin bocah bocah kek lu mah cwe jga hina bgt lu ngeladenin cwe kek lu mahapasi dek,dede dede ini masi apa pepeknya masi sempit kan jan sampe om entot yakan itu pepek lu itu yakan gua tau pepek lu itu masi sempit kalau gua masukin otong gua ntar berdarah ya ntar takutnya lu hamil yakan kalau ngga ini apa emak lu gua entotin sekalian yekan gua injek injek sekalian pepeknya yekan yehh pake sosoan ngtain org, de klo mau reply gua vn video muka jga ga ush vn yehh, najis bet najis gua goblok ngeladenin bocah bocah kek lu mah cwe jga hina bgt lu ngeladenin cwe kek lu mahapasi dek,dede dede ini masi apa pepeknya masi sempit kan jan sampe om entot yakan itu pepek lu itu yakan gua tau pepek lu itu masi sempit kalau gua masukin otong gua ntar berdarah ya ntar**")
+
+
+
+
+
+
+@ultroid_cmd(pattern="o")
+async def _(xx):
+ await xx.edit("HAI JELEK!")
+ await asyncio.sleep(3)
+ await xx.edit("**KENALIN NIH**")
+ await asyncio.sleep(1)
+ await xx.edit("**ORANG PALING CAKEP SE TELEGRAM**")
+ await asyncio.sleep(1)
+ await xx.edit("GAK KEK ELU")
+ await asyncio.sleep(1)
+ await xx.edit("HEHEHE")
+ await asyncio.sleep(1)
+ await xx.edit("Run! Run! Runn!!!")
+ await asyncio.sleep(1)
+ await xx.edit("""
+ 
+┏━━┳┓╋╋┏┳━━━┓
+┃┏┓┃┗┓┏┛┃┏━━┛
+┃┗┛┗┓┗┛┏┫┗━━┓
+┃┏━┓┣┓┏┛┃┏━━┛
+┃┗━┛┃┃┃╋┃┗━━┓
+┗━━━┛┗┛╋┗━━━┛
+MWAHH
+       
+ """)
+
+
+ 
+
+
+
+
+
+async def get_chatinfo(event):
+    chat = event.pattern_match.group(1)
+    chat_info = None
+    if chat:
+        try:
+            chat = int(chat)
+        except ValueError:
+            pass
+    if not chat:
+        if event.reply_to_msg_id:
+            replied_msg = await event.get_reply_message()
+            if replied_msg.fwd_from and replied_msg.fwd_from.channel_id is not None:
+                chat = replied_msg.fwd_from.channel_id
+        else:
+            chat = event.chat_id
+    try:
+        chat_info = await event.client(GetFullChatRequest(chat))
+    except:
+        try:
+            chat_info = await event.client(GetFullChannelRequest(chat))
+        except ChannelInvalidError:
+            await event.reply("`Invalid channel/group`")
+            return None
+        except ChannelPrivateError:
+            await event.reply("`This is a private channel/group or I am banned from there`")
+            return None
+        except ChannelPublicGroupNaError:
+            await event.reply("`Channel or supergroup doesn't exist`")
+            return None
+        except (TypeError, ValueError) as err:
+            await event.reply("`Invalid channel/group`")
+            return None
+    return chat_info
+
+
+def make_mention(user):
+    if user.username:
+        return f"@{user.username}"
+    else:
+        return inline_mention(user)
+
+
+def inline_mention(user):
+    full_name = user_full_name(user) or "No Name"
+    return f"[{full_name}](tg://user?id={user.id})"
+
+
+def user_full_name(user):
+    names = [user.first_name, user.last_name]
+    names = [i for i in list(names) if i]
+    full_name = ' '.join(names)
+    return full_name
+ 
+
+
+
+
+
+
+@borg.on(admin_cmd(pattern=r"hunting ?(.*)"))
+async def get_users(event):   
+    sender = await event.get_sender() ; me = await event.client.get_me()
+    if not sender.id == me.id:
+        rkp = await event.reply("`processing...`")
+    else:
+     rkp = await event.edit("`processing...`")
+    rk1 = await get_chatinfo(event) ; chat = await event.get_chat()
+    if event.is_private:
+              return await rkp.edit("`Sorry, Can add users here`")    
+    s = 0 ; f = 0 ; error = 'None'   
+  
+    await rkp.edit("**TerminalStatus**\n\n`Collecting Users.......`")
+    async for user in event.client.iter_participants(rk1.full_chat.id):
+                try:
+                    if error.startswith("Too"):
+                        return await rkp.edit(f"**Terminal Finished With Error**\n(`May Got Limit Error from telethon Please try agin Later`)\n**Error** : \n`{error}`\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people")
+                    await event.client(functions.channels.InviteToChannelRequest(channel=chat,users=[user.id]))
+                    s = s + 1                                                    
+                    await rkp.edit(f"**Terminal Running...**\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people\n\n**× LastError:** `{error}`")                
+                except Exception as e:
+                    error = str(e) ; f = f + 1             
+    return await rkp.edit(f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people")
+
+from secrets import choice
+
+from telethon.tl.types import InputMessagesFilterVideo, InputMessagesFilterVoice
+
+from userbot.utils import edit_or_reply
+
+@ultroid_cmd(pattern="desahcewe$")
+async def _(event):
+    xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
+    try:
+        desahcewe = [
+            desah
+            async for desah in event.client.iter_messages(
+                "@desahancewesangesange", filter=InputMessagesFilterVoice
+            )
+        ]
+        await event.client.send_file(
+            event.chat_id, file=choice(desahcewe), reply_to=event.reply_to_msg_id
+        )
+        await xx.delete()
+    except Exception:
+        await xx.edit("**Tidak bisa menemukan desahan cewe.**")
+
+
+@ultroid_cmd(pattern="desahcowo$")
+async def _(event):
+    xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
+    try:
+        desahcowo = [
+            desah
+            async for desah in event.client.iter_messages(
+                "@desahancowokkkk", filter=InputMessagesFilterVoice
+            )
+        ]
+        await event.client.send_file(
+            event.chat_id, file=choice(desahcowo), reply_to=event.reply_to_msg_id
+        )
+        await xx.delete()
+    except Exception:
+        await xx.edit("**Tidak bisa menemukan desahan cowo.**")
+
+
+
+@ultroid_cmd(pattern="asupan$")
+async def _(event):
+    xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
+    try:
+        asupannya = [
+            asupan
+            async for asupan in event.client.iter_messages(
+                "@tedeasupancache", filter=InputMessagesFilterVideo
+            )
+        ]
+        await event.client.send_file(
+            event.chat_id, file=choice(asupannya), reply_to=event.reply_to_msg_id
+        )
+        await xx.delete()
+    except Exception:
+        await xx.edit("**Tidak bisa menemukan video asupan.**")
+        
+@ultroid_cmd(pattern="bokep$")
+             
+
+async def _(event):
+    xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
+    try:
+        asupannya = [
+            bokep
+            async for bokep in event.client.iter_messages(
+                "@fakyudurov", filter=InputMessagesFilterVideo
+            )
+        ]
+        await event.client.send_file(
+            event.chat_id, file=choice(asupannya), reply_to=event.reply_to_msg_id
+        )
+        await xx.delete()
+    except Exception:
+        await xx.edit("**Tidak bisa menemukan video asupan.**")
+        
 DEFAULTUSER = "ULTROID"
 
 M = ("___________ \n"
