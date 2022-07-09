@@ -119,8 +119,7 @@ async def typewriter(typew):
 async def _(event):
     await event.client.send_message(
         event.chat_id,
-        "**Assalamualaikum Dulu Biar Sopan**",
-        reply_to=event.reply_to_msg_id,
+        "**Assalamualaikum Dulu Biar Sopan**"
     )
     await event.delete()
 
@@ -128,7 +127,7 @@ async def _(event):
 @ultroid_cmd(pattern="l(?: |$)(.*)")
 async def _(event):
     await event.client.send_message(
-        event.chat_id, "**Wa'alaikumsalam**", reply_to=event.reply_to_msg_id
+        event.chat_id, "**Wa'alaikumsalam**"
     )
     await event.delete()
 
@@ -257,18 +256,18 @@ async def r1(xx):
 
 
 @ultroid_cmd(pattern="o")
-async def _(xx):
- await xx.edit("HAI JELEK!")
+async def _(event):
+ xx = await edit_or_reply(event, "**HAI JELEK!**")
  await asyncio.sleep(3)
  await xx.edit("**KENALIN NIH**")
  await asyncio.sleep(1)
  await xx.edit("**ORANG PALING CAKEP SE TELEGRAM**")
  await asyncio.sleep(1)
- await xx.edit("GAK KEK ELU")
+ await xx.edit("**GAK KEK ELU**")
  await asyncio.sleep(1)
  await xx.edit("HEHEHE")
  await asyncio.sleep(1)
- await xx.edit("Run! Run! Runn!!!")
+ await xx.edit("**Run! Run! Runn!!!**")
  await asyncio.sleep(1)
  await xx.edit("""
  
@@ -281,7 +280,7 @@ async def _(xx):
 MWAHH
        
  """)
- await xx.delete()
+ await event.delete()
 
  
 
