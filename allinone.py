@@ -125,17 +125,6 @@ async def _(event):
     await event.delete()
 
 
-
-
-
-@ultroid_cmd(pattern="P(?: |$)(.*)")
-async def _(event):
-    me = await event.client.get_me()
-    xx = await edit_or_reply(event, f"**Haii Salken Saya {me.first_name}**")
-    await asyncio.sleep(2)
-    await xx.edit("**Assalamualaikum...**")
-
-
 @ultroid_cmd(pattern="l(?: |$)(.*)")
 async def _(event):
     await event.client.send_message(
@@ -292,7 +281,7 @@ async def _(xx):
 MWAHH
        
  """)
-
+ await xx.delete()
 
  
 
