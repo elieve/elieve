@@ -255,7 +255,7 @@ async def r1(xx):
 
 
 
-@ultroid_cmd(pattern="o")
+@ultroid_cmd(pattern="o(?: |$)(.*)")
 async def _(event):
  xx = await edit_or_reply(event, "**HAI JELEK!**")
  await asyncio.sleep(3)
